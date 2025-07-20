@@ -89,7 +89,7 @@ list_Array.forEach((list) => {
     })
     
     this.classList.add("dashboard_list--active")
-    time_Frame = this.innerHTML.toLowerCase()
+    let time_Frame = this.innerHTML.toLowerCase()
     getData(time_Frame)
   })
 })
