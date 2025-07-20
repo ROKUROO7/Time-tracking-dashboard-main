@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-main-using-javascript-FqZ9j-gTDd](https://www.frontendmentor.io/solutions/time-tracking-dashboard-main-using-javascript-FqZ9j-gTDd)
+- Live Site URL: [https://rokuroo7.github.io/Time-tracking-dashboard-main/](https://rokuroo7.github.io/Time-tracking-dashboard-main/)
 
 ## My process
 
