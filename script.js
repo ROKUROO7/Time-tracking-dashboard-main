@@ -61,7 +61,7 @@ function populate_DOM(time_Frame,data) {
     <section class="dashboard-card_section dashboard-card_section--active">
       <header class="dashboard-card_header">
         <h2>${title}</h2>
-        <figure role="button" class="dashboard-card_icon">
+        <figure class="dashboard-card_icon">
           <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="inherit" fill-rule="evenodd"/></svg>
         </figure>
       </header>
