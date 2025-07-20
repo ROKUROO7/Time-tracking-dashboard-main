@@ -14,11 +14,11 @@ async function getData(time_Frame) {
 
 function pre_text(time_Frame) {
   
-  if (time_Frame == "daily") {
+  if (time_Frame === "daily") {
     return "Yesterday -"
   }
   
-  else if (time_Frame == "weekly") {
+  else if (time_Frame === "weekly") {
     return "Last Week -"
   }
   
