@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@mixin Rubik($weight) {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+// Colors
+// Primary
+$Purple-600: hsl(246, 80%, 60%);
+$Orange-300_work: hsl(15, 100%, 70%);
+$Blue-300_play: hsl(195, 74%, 62%);
+$Pink-400_study: hsl(348, 100%, 68%);
+$Green-400_exercise: hsl(145, 58%, 55%);
+$Purple-700_social: hsl(264, 64%, 52%);
+$Yellow-300_self-care: hsl(43, 84%, 65%);
+
+// Neutral
+$Navy-950: hsl(226, 43%, 10%);
+$Navy-900: hsl(235, 46%, 20%);
+$Purple-500: hsl(235, 45%, 61%);
+$Navy-200: hsl(236, 100%, 87%);
+$White: #fff;
+
+// Typography
+// Body Copy
+$Font-Default: 18px; //(card titles e.g. Work, Play)
+
+// Font-Weights
+$Weight-standerd: 300;
+$Weight-medium: 400; 
+$Weight-bold: 500;
+
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+  
+  &--Navy-950 {
+    background-color: $Navy-950;
+    color: $Navy-200;
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  
+  &_header {
+    background-color: $Navy-900;
+    border-radius: 1rem;
+  }
+  
+  &_figure {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+    &--Purple-600 {
+      background-color: $Purple-600;
+    }
+    
+    img {
+      width: 4.0625rem;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+  }
+  
+  &_figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    
+    p {
+      @include Rubik($Weight-bold);
+      font-size: 0.9rem;
+      color: $Navy-200;
+      opacity: 80%;
+    }
+    
+    h1 {
+      @include Rubik($Weight-standerd);
+      font-size: 1.5rem;
+      color: $White;
+      opacity: 80%;
+    }
+  }
+  
+  &_list-container {
+    @include Rubik($Weight-medium);
+    display: flex;
+    justify-content: space-around;
+    padding-inline-start: 0.5rem;
+    padding-block: 1.5rem;
+    border-radius: 1rem;
+    font-size: $Font-Default;
+    
+    &--Navy-900 {
+      background-color: $Navy-900;
+      color: $Purple-500;
+    }
+  }
+  
+  &_list:hover {
+    cursor: pointer;
+    color: $White;
+  }
+  
+  &_list--active {
+    color: $White;
+  }
+}
+
+.dashboard-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  row-gap: 1.5rem;
+}
+
+.dashboard-card {
+  border-radius: 1rem;
+  
+  &--orange {
+    background-color: $Orange-300_work;
+  }
+  
+  &--blue {
+    background-color: $Blue-300_play;
+  }
+  
+  &--pink {
+    background-color: $Pink-400_study;
+  }
+  
+  &--green {
+    background-color: $Green-400_exercise;
+  }
+  
+  &--purple {
+    background-color: $Purple-700-social;
+  }
+  
+  &--yellow {
+    background-color: $Yellow-300-self-care;
+  }
+  
+  &_image {
+    min-height: 2.375rem;
+    
+    &--Work {
+      background: url(../images/icon-work.svg);
+      background-repeat: no-repeat;
+      background-position-y: 22%;
+      background-position-x: 90%;
+    }
+    
+    &--Play {
+      background: url(../images/icon-play.svg);
+      background-repeat: no-repeat;
+      background-position-y: 12%;
+      background-position-x: 90%;
+    }
+    
+    &--Study {
+      background: url(../images/icon-study.svg);
+      background-repeat: no-repeat;
+      background-position-y: 15%;
+      background-position-x: 90%;
+    }
+    
+    &--Exercise {
+      background: url(../images/icon-exercise.svg);
+      background-repeat: no-repeat;
+      background-position-y: 5%;
+      background-position-x: 90%;
+    }
+    
+    &--Social {
+      background: url(../images/icon-social.svg);
+      background-repeat: no-repeat;
+      background-position-y: 25%;
+      background-position-x: 90%;
+    }
+    
+    &--Self {
+      background: url(../images/icon-self-care.svg);
+      background-repeat: no-repeat;
+      background-position-y: 35%;
+      background-position-x: 90%;
+    }
+  }
+  
+  &_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-inline: 1.5rem;
+    padding-block: 2rem;
+    border-radius: 1rem;
+    background-color: $Navy-900;
+    z-index: 1;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $Navy-900;
+      border-radius: 1rem;
+      z-index: -1;
+    }
+    
+    &--active:hover::before {
+      cursor: pointer;
+      background-color: $Purple-500;
+      opacity: 0.5;
+    }
+  }
+  
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    
+    h2 {
+      @include Rubik($Weight-bold);
+      font-size: $Font-Default;
+      color: $White;
+    }
+  }
+  
+  &_icon {
+    svg {
+      fill: #BBC0FF;
+    }
+    
+    svg:hover {
+      cursor: pointer;
+      fill: $White;
+    }
+  }
+  
+  &_hour-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &_current-hour {
+    @include Rubik($Weight-standerd);
+    font-size: 2rem;
+    color: $White;
+  }
+  
+  &_previous-hour {
+    @include Rubik($Weight-medium);
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 37.5rem) {
+  .dashboard-cards-container {
+    min-width: 500px;
+    gap: 2rem;
+  }
+  
+  .dashboard-card_hour-container {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .dashboard-cards-container {
+    min-width: 43.75rem;
+  }
+  
+  .dashboard-card_section {
+    padding-inline: 2rem;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .dashboard {
+    flex-direction: row;
+    column-gap: 1.5rem;
+    
+    &_header {
+      max-width: 15.625rem;
+    }
+    
+    &_figure {
+      min-height: 15.625rem;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2rem;
+      
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        opacity: 90%;
+      }
+    }
+    
+    &_list-container {
+      flex-direction: column;
+      padding: 2rem;
+      row-gap: 1.5rem;
+      
+      li {
+        max-width: fit-content;
+      }
+    }
+  }
+  
+  .dashboard-cards-container {
+    gap: 1.5rem;
+    min-width: 46.875rem;
+  }
+  
+  .dashboard-card_header {
+    padding-block-end: 0.4rem;
+  }
+    
+  .dashboard-card_current-hour {
+    font-size: 3.5rem;
+  }
+}

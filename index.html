@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  
+  <link rel="stylesheet" href="./scss/reset.css"/>
+  <link rel="stylesheet" href="./scss/style.css"/>
+  
+  <script defer src="script.js"></script>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <main class="main-container main-container--Navy-950">
+    <artical class="dashboard">
+      <header class="dashboard_header">
+        
+        <figure class="dashboard_figure dashboard_figure--Purple-600">
+          <img src="/images/image-jeremy.png" alt="jeremy image">
+          <figcaption class="dashboard_figcaption">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </figcaption>
+        </figure>
+        
+        <ul class="dashboard_list-container dashboard_list-container--Navy-900">
+          <li class="dashboard_list" role="button">Daily</li>
+          <li class="dashboard_list dashboard_list--active" role="button">Weekly</li>
+          <li class="dashboard_list" role="button">Monthly</li>         
+        </ul>
+        
+      </header>
+      
+      <div id="cards-container" class="dashboard-cards-container"></div>
+      
+    </artical>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ROKUROO7</a>.
+  </footer>
+  
+  <!-- Only for spck editor remove when using git codespaces -->
+  <script>
+    compileSCSS()
+  </script>
+  
+</body>
+</html>

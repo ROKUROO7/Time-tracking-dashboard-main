@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+}
+.main-container--Navy-950 {
+  background-color: hsl(226, 43%, 10%);
+  color: hsl(236, 100%, 87%);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.dashboard_header {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+}
+.dashboard_figure {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.dashboard_figure--Purple-600 {
+  background-color: hsl(246, 80%, 60%);
+}
+.dashboard_figure img {
+  width: 4.0625rem;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.dashboard_figcaption {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.dashboard_figcaption p {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: hsl(236, 100%, 87%);
+  opacity: 80%;
+}
+.dashboard_figcaption h1 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 80%;
+}
+.dashboard_list-container {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: space-around;
+  padding-inline-start: 0.5rem;
+  padding-block: 1.5rem;
+  border-radius: 1rem;
+  font-size: 18px;
+}
+.dashboard_list-container--Navy-900 {
+  background-color: hsl(235, 46%, 20%);
+  color: hsl(235, 45%, 61%);
+}
+.dashboard_list:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.dashboard_list--active {
+  color: #fff;
+}
+
+.dashboard-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 1.5rem;
+}
+
+.dashboard-card {
+  border-radius: 1rem;
+}
+.dashboard-card--orange {
+  background-color: hsl(15, 100%, 70%);
+}
+.dashboard-card--blue {
+  background-color: hsl(195, 74%, 62%);
+}
+.dashboard-card--pink {
+  background-color: hsl(348, 100%, 68%);
+}
+.dashboard-card--green {
+  background-color: hsl(145, 58%, 55%);
+}
+.dashboard-card--purple {
+  background-color: hsl(264, 64%, 52%);
+}
+.dashboard-card--yellow {
+  background-color: hsl(43, 84%, 65%);
+}
+.dashboard-card_image {
+  min-height: 2.375rem;
+}
+.dashboard-card_image--Work {
+  background: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position-y: 22%;
+  background-position-x: 90%;
+}
+.dashboard-card_image--Play {
+  background: url(../images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position-y: 12%;
+  background-position-x: 90%;
+}
+.dashboard-card_image--Study {
+  background: url(../images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position-y: 15%;
+  background-position-x: 90%;
+}
+.dashboard-card_image--Exercise {
+  background: url(../images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 90%;
+}
+.dashboard-card_image--Social {
+  background: url(../images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position-y: 25%;
+  background-position-x: 90%;
+}
+.dashboard-card_image--Self {
+  background: url(../images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position-y: 35%;
+  background-position-x: 90%;
+}
+.dashboard-card_section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-inline: 1.5rem;
+  padding-block: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(235, 46%, 20%);
+  z-index: 1;
+}
+.dashboard-card_section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  z-index: -1;
+}
+.dashboard-card_section--active:hover::before {
+  cursor: pointer;
+  background-color: hsl(235, 45%, 61%);
+  opacity: 0.5;
+}
+.dashboard-card_header {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-card_header h2 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  color: #fff;
+}
+.dashboard-card_icon svg {
+  fill: #BBC0FF;
+}
+.dashboard-card_icon svg:hover {
+  cursor: pointer;
+  fill: #fff;
+}
+.dashboard-card_hour-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-card_current-hour {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+  color: #fff;
+}
+.dashboard-card_previous-hour {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .dashboard-cards-container {
+    min-width: 500px;
+    gap: 2rem;
+  }
+  .dashboard-card_hour-container {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+}
+@media screen and (min-width: 50rem) {
+  .dashboard-cards-container {
+    min-width: 43.75rem;
+  }
+  .dashboard-card_section {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .dashboard {
+    flex-direction: row;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .dashboard_header {
+    max-width: 15.625rem;
+  }
+  .dashboard_figure {
+    min-height: 15.625rem;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+  .dashboard_figure h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    opacity: 90%;
+  }
+  .dashboard_list-container {
+    flex-direction: column;
+    padding: 2rem;
+    row-gap: 1.5rem;
+  }
+  .dashboard_list-container li {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  .dashboard-cards-container {
+    gap: 1.5rem;
+    min-width: 46.875rem;
+  }
+  .dashboard-card_header {
+    padding-block-end: 0.4rem;
+  }
+  .dashboard-card_current-hour {
+    font-size: 3.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
