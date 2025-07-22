@@ -51,7 +51,7 @@ function populate_DOM(time_Frame,data) {
     const current_Hours = data[i].timeframes[time_Frame].current
     const previous_Hours = data[i].timeframes[time_Frame].previous
     
-    let article = document.createElement("article")
+    const article = document.createElement("article")
     
     article.className = `dashboard-card dashboard-card--${colors[i]}`
     
@@ -89,7 +89,7 @@ list_Array.forEach((list) => {
     })
     
     this.classList.add("dashboard_list--active")
-    let time_Frame = this.innerHTML.toLowerCase()
+    const time_Frame = this.innerHTML.toLowerCase()
     getData(time_Frame)
   })
 })
