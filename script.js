@@ -80,9 +80,9 @@ getData("weekly")
 const dashboard_list = document.getElementsByClassName("dashboard_list")
 const list_Array = Array.from(dashboard_list)
 
-list_Array.forEach((list) => {
+list_Array.forEach((sub_list) => {
   
-  list.addEventListener('click', function(event) {
+  sub_list.addEventListener('click', function() {
     
     list_Array.forEach((list) => {
       list.classList.remove("dashboard_list--active")
