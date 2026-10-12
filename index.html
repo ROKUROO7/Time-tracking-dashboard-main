@@ -7,11 +7,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preload" href="./images/icon-exercise.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="./images/icon-play.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="./images/icon-self-care.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="./images/icon-social.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="./images/icon-study.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="./images/icon-work.svg" as="image" type="image/svg+xml">
   
-  <link rel="stylesheet" href="./scss/reset.css"/>
-  <link rel="stylesheet" href="./scss/style.css"/>
+  <link rel="stylesheet" href="./src/scss/reset.css"/>
+  <link rel="stylesheet" href="./src/scss/style.css"/>
   
-  <script defer src="script.js"></script>
+  <script defer type="module" src="./dist/script.js"></script>
   
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -34,9 +41,13 @@
         </figure>
         
         <ul class="dashboard_list-container dashboard_list-container--Navy-900">
-          <li class="dashboard_list">Daily</li>
-          <li class="dashboard_list dashboard_list--active">Weekly</li>
-          <li class="dashboard_list">Monthly</li>         
+          <li>
+            <button class="dashboard_list" value="daily">Daily</button></li>
+          <li>
+            <button class="dashboard_list dashboard_list--active" value="weekly">Weekly</button></li>
+          <li>
+            <button class="dashboard_list" value="monthly">Monthly</button>
+          </li>         
         </ul>
         
       </header>
